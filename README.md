@@ -1,4 +1,4 @@
-# List-and-Queue-stuff
+# List-and-Queue
 
 
 fully working list and queue classes with some methods.
