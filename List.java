@@ -74,39 +74,66 @@ public class List {
 
         ListElements a = start.next;
 
-        for(int i = 0; i < index; i++){
+        if((index < size)&&(index >= 0)){
 
-            a = a.next;
+            for(int i = 0; i < index; i++){
 
+                a = a.next;
+            }
+
+            return a.element;
+        }
+        else{
+            return null;
         }
 
-        return a.element;
+
 
     }
 
     private ListElements getElement(int index){
 
-        ListElements a = start.next;
+        if((index < size)&&(index >= 0)){
 
-        for(int i = 0; i < index; i++){
+            ListElements a = start.next;
 
-            a = a.next;
+            for(int i = 0; i < index; i++){
+
+                a = a.next;
+
+            }
+
+            return a;
 
         }
-
-        return a;
+        else{
+            return null;
+        }
 
     }
 
-    public void remove(int index){
+    public boolean remove(int index){
 
-        ListElements a = getElement(index).next;
+        if((index < size)&&(index >= 0)){
 
-        getElement(index).next.previous = getElement(index).previous;
+            ListElements a = getElement(index).next;
 
-        getElement(index-1).next = a;
+            getElement(index).next.previous = getElement(index).previous;
 
-        size--;
+            if(index > 0){
+                getElement(index-1).next = a;
+            }
+            else{
+                start.next = a;
+            }
+
+            size--;
+            return true;
+
+        }
+        else{
+            return false;
+        }
 
     }
 

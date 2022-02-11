@@ -3,7 +3,7 @@ public class MainClass {
     public static void main(String[] args) {
 
 
-
+/*
         Queue queue1 = new Queue();
 
         queue1.add(5);
@@ -21,6 +21,7 @@ public class MainClass {
         System.out.println("Size " + queue1.getSize());
 
 
+*/
 
 
 
@@ -28,8 +29,7 @@ public class MainClass {
 
 
 
-
-
+        System.out.println("\n");
 
 
 
@@ -42,15 +42,18 @@ public class MainClass {
         liste1.add(33);
         liste1.add(77);
 
+        System.out.println(liste1.remove(-1));
+        System.out.println(liste1.remove(0));
+        System.out.println(liste1.remove(4));
 
-        liste1.remove(2);
+        System.out.println("\n");
 
-
-
+        System.out.println(liste1.get(-1));
         System.out.println(liste1.get(0));
         System.out.println(liste1.get(1));
         System.out.println(liste1.get(2));
         System.out.println(liste1.get(3));
+        System.out.println(liste1.get(4));
 
         System.out.println("\n");
 
